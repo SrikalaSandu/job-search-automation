@@ -1,0 +1,11 @@
+# Secrets — never commit
+.env
+
+# output/*.xlsx, output/seen_jobs.json, output/resumes/*.docx, and
+# output/cover_letters/*.docx are intentionally tracked (not ignored) —
+# the GitHub Actions workflow commits them back after each scheduled run
+# so state persists across runs and the tracker/docs stay reviewable from
+# the repo without needing local access.
+
+__pycache__/
+*.pyc
